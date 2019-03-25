@@ -1,12 +1,9 @@
-<form>
+<form id="form">
     <input id="file" name="file" type="file" />
-    <input id="token" name="token" type="hidden" />
 </form>
 
 $("#file").on("change", function(){
-  var formData = new FormData();
-  formData.append("file", $("#file")[0].files);
-  formData.append("token", $("#token").val());
+  var formData = new FormData($("#form")[0]);
   $.ajax({
       url: "http://uploadUrl",
       type: "POST",
