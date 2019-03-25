@@ -6,6 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // 资源路径映射，请求路径为"/img/**"，实际访问"F:/temp/"
         registry.addResourceHandler("/img/**").addResourceLocations("file:F:/temp/");
     }
 }
