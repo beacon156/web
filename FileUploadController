@@ -13,9 +13,9 @@ public class FileUploadController {
 
     public final static String tempUrl = "F:/temp/";
 
-    @RequestMapping("fileupload")
+    @RequestMapping("fileUpload")
     public String a(){
-        return "FileUpload";
+        return "fileUpload";
     }
 
     @RequestMapping("upload")
