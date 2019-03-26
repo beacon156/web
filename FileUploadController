@@ -13,9 +13,9 @@ public class FileUploadController {
 
     public final static String tempUrl = "F:/temp/";
 
-    @RequestMapping("a")
+    @RequestMapping("fileupload")
     public String a(){
-        return "a";
+        return "FileUpload";
     }
 
     @RequestMapping("upload")
@@ -27,10 +27,5 @@ public class FileUploadController {
         FileOutputStream out = new FileOutputStream(path);
         out.write(file.getBytes());
         return path;
-    }
-    @RequestMapping("test")
-    @ResponseBody
-    public String test(){
-        return "sss";
     }
 }
