@@ -1,0 +1,20 @@
+<form id="form">
+    <input id="file" name="file" type="file" />
+</form>
+
+$("#file").on("change", function(){
+  var formData = new FormData($("#form")[0]);
+  $.ajax({
+      url: "http://uploadUrl",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(response){
+              // 根据返回结果指定界面操作
+      }
+  });
+});
+
+<!-- 根据WebConfig的配置映射到服务器本地文件 -->
+<img src="img/img.bmp">
